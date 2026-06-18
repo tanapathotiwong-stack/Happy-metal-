@@ -526,7 +526,10 @@ section {
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+                filter 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.45s cubic-bezier(0.25, 1, 0.5, 1);
     background-color: var(--color-bg-card);
     aspect-ratio: 1 / 1.8;
 }
@@ -544,7 +547,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+    background: transparent;
     opacity: 0;
     display: flex;
     align-items: flex-end;
@@ -583,8 +586,19 @@ section {
     padding-left: 1px; /* Visual center adjustment for chevron */
 }
 
+/* When the grid is hovered, blur and scale down all sibling cards */
+.brands-grid:hover .brand-card {
+    filter: blur(5px) grayscale(20%);
+    opacity: 0.55;
+    transform: scale(0.95);
+}
+
+/* The card being hovered pops out, scales up, has bright opacity and no blur */
 .brand-card:hover {
-    transform: translateY(-15px) scale(1.03);
+    transform: translateY(-20px) scale(1.08) !important;
+    filter: none !important;
+    opacity: 1 !important;
+    z-index: 10;
 }
 
 .brand-card:hover .brand-card-overlay {
@@ -593,6 +607,14 @@ section {
 
 .brand-card:hover .brand-card-btn {
     transform: translateY(0);
+}
+
+/* Focus Mode: Blur and dim the section header when a card is hovered */
+.brands-section:has(.brand-card:hover) .section-header {
+    filter: blur(3px);
+    opacity: 0.6;
+    transition: filter 0.45s cubic-bezier(0.25, 1, 0.5, 1), 
+                opacity 0.45s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Glow Styles */
