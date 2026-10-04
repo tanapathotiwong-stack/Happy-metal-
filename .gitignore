@@ -2,3 +2,10 @@
 *.log
 .DS_Store
 Thumbs.db
+backup_local/
+happy metal/
+/Artboard *.png
+/BGM.png
+/Happt Metal.png
+/Happy *.jpg
+/หกด*.png

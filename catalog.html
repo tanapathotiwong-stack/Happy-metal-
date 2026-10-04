@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -40,8 +40,8 @@
             </nav>
             
             <div class="nav-actions">
-                <a href="https://line.me" target="_blank" class="social-icon line-btn" title="Line Official Account"><i class="fab fa-line"></i></a>
-                <a href="https://facebook.com" target="_blank" class="social-icon fb-btn" title="Facebook Page"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://lin.ee/QelzAv5" target="_blank" class="social-icon line-btn" title="Line Official Account"><i class="fab fa-line"></i></a>
+                <a href="https://facebook.com/HappyWeldingOfficial" target="_blank" class="social-icon fb-btn" title="Facebook Page"><i class="fab fa-facebook-f"></i></a>
                 <div class="lang-switcher" id="lang-switcher">
                     <button class="lang-btn" id="lang-btn">
                         <span>TH</span> <i class="fas fa-chevron-down"></i>
@@ -80,344 +80,371 @@
                 <p class="section-subtitle">ตัวอย่างสินค้าคุณภาพสูง แยกประเภทตามการใช้งานสำหรับมืออาชีพ</p>
             </div>
             
-            <!-- Filter Tabs -->
-            <div class="catalog-filters">
-                <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
-                <button class="filter-btn" data-filter="happy-tools">Happy Tools</button>
-                <button class="filter-btn" data-filter="happy-welding">Happy Welding</button>
-                <button class="filter-btn" data-filter="happy-caster">Happy Caster</button>
-                <button class="filter-btn" data-filter="happy-venus">Happy Venus</button>
-                <button class="filter-btn" data-filter="others">แบรนด์อื่นๆ</button>
+            <!-- Search & Filter Controls -->
+            <div class="catalog-controls">
+                <!-- Search Box -->
+                <div class="catalog-search-bar">
+                    <div class="catalog-search-wrapper">
+                        <i class="fas fa-search catalog-search-icon"></i>
+                        <input type="text" id="catalog-search-input" class="catalog-search-input" placeholder="ค้นหาชื่อสินค้า เช่น ใบตัด, หน้ากากเชื่อม, ลูกล้อ, ราวกระจก, พุก, สเปรย์..." autocomplete="off">
+                        <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="ล้างการค้นหา" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="catalog-filters">
+                    <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+                    <button class="filter-btn" data-filter="happy-tools">Happy Tools</button>
+                    <button class="filter-btn" data-filter="happy-welding">Happy Welding</button>
+                    <button class="filter-btn" data-filter="happy-caster">Happy Caster</button>
+                    <button class="filter-btn" data-filter="happy-venus">Happy Venus</button>
+                    <button class="filter-btn" data-filter="others">แบรนด์อื่นๆ / Happy Screw</button>
+                </div>
+
+                <!-- Search & Filter Stats -->
+                <div class="catalog-stats">
+                    <span id="search-result-count">พบสินค้า 23 รายการ</span>
+                </div>
             </div>
             
             <!-- Product Grid -->
             <div class="products-grid" id="products-grid">
                 <!-- Happy Tools products -->
-                <div class="product-item" data-category="happy-tools" data-title="ใบเจียร์คุณภาพสูง" data-desc="ใบเจียร์เหล็ก โลหะ และสแตนเลส มีความทนทาน ใช้งานได้ยาวนาน ปลอดภัยสูงสุด" data-img="Packshot/Artboard 5.png">
+                <div class="product-item" data-category="happy-tools" data-title="ใบตัดเหล็กและสแตนเลส 4 นิ้ว SUMO FAST CUT" data-desc="ใบตัดเหล็กและสแตนเลส SUMO ขนาด 4 นิ้ว (107x16 มม.) บางเพียง 1.0 มม. เสริมใยไฟเบอร์ 2 ชั้น ทนทาน ปลอดภัย ไร้รอยไหม้ มาตรฐาน EN12413 รอบตัดสูงสุด 14,600 RPM" data-img="Packshot/Artboard 5.png" data-keywords="sumo fast cut ใบตัด ใบตัดเหล็ก ใบตัดสแตนเลส ไฟเบอร์ 4 นิ้ว ตัดคม ลูกหมู หินเจียร์ happy tools">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 5.png" alt="ใบเจียร์คุณภาพสูง" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 5.png" alt="ใบตัดเหล็กและสแตนเลส 4 นิ้ว SUMO FAST CUT" class="product-img" loading="lazy">
                             <div class="product-badge tools-badge">Happy Tools</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">ใบเจียร์เหล็ก / Grinding Disc</h3>
-                            <p class="product-desc-short">ใบเจียร์เหล็กและสแตนเลสคุณภาพสูง แข็งแรงทนทาน</p>
-                            <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="product-item" data-category="happy-tools" data-title="ใบตัดเหล็กไฟเบอร์" data-desc="ใบตัดไฟเบอร์ 4 นิ้ว และ 14 นิ้ว คมกริบ ตัดไว ไร้รอยไหม้ เหมาะสำหรับงานเหล็กและสแตนเลสทุกชนิด" data-img="Packshot/Artboard 6.png">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 6.png" alt="ใบตัดเหล็กไฟเบอร์" class="product-img" loading="lazy">
-                            <div class="product-badge tools-badge">Happy Tools</div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">ใบตัดเหล็กไฟเบอร์ / Cutting Disc</h3>
-                            <p class="product-desc-short">ตัดคม รวดเร็ว แม่นยำ ปลอดภัยในการใช้งาน</p>
+                            <h3 class="product-name">ใบตัดเหล็กและสแตนเลส 4" / SUMO Fast Cut</h3>
+                            <p class="product-desc-short">ใบตัดบาง 1.0 มม. ตัดคม ไว ไร้รอยไหม้ ปลอดภัย ใย 2 ชั้น</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-tools" data-title="แปรงลวดถ้วยถักเปีย" data-desc="แปรงลวดถ้วยสำหรับงานขัดสนิม ทำความสะอาดพื้นผิวเหล็ก ขัดสีเก่าออกได้อย่างรวดเร็วและปลอดภัย" data-img="Packshot/Artboard 7.png">
+                <div class="product-item" data-category="happy-tools" data-title="สเปรย์ขจัดคราบน้ำมันและจารบี SUMO AUTO 840ml" data-desc="สเปรย์ล้างทำความสะอาดเบรกและชิ้นส่วนเครื่องยนต์ SUMO AUTO สูตร O-Ring Safe ไม่ทำลายยาง พลาสติก และโอริง ขจัดคราบน้ำมัน คราบจารบี และสิ่งสกปรกฝังแน่นได้อย่างหมดจด แห้งเร็ว ไม่ทิ้งคราบ ขนาดคุ้มค่า 840 มล." data-img="Packshot/Artboard 6.png" data-keywords="สเปรย์ sumo auto ล้างเบรก ขจัดคราบน้ำมัน จารบี o-ring safe cleaner degreaser น้ำยาล้างเครื่อง ช่างซ่อม happy tools">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 7.png" alt="แปรงลวดถ้วยถักเปีย" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 6.png" alt="สเปรย์ขจัดคราบน้ำมันและจารบี SUMO AUTO" class="product-img" loading="lazy">
                             <div class="product-badge tools-badge">Happy Tools</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">แปรงลวดถ้วย / Wire Cup Brush</h3>
-                            <p class="product-desc-short">งานขัดคราบสนิม ขัดเตรียมพื้นผิวได้อย่างดีเยี่ยม</p>
-                            <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item" data-category="happy-tools" data-title="กระดาษทรายซ้อน" data-desc="กระดาษทรายเรียงซ้อน ขัดแต่งผิวเรียบ งานขัดรอยเชื่อม ขัดขึ้นเงาโลหะ มีความยืดหยุ่นสูง" data-img="Packshot/Artboard 8.png">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 8.png" alt="กระดาษทรายซ้อน" class="product-img" loading="lazy">
-                            <div class="product-badge tools-badge">Happy Tools</div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">กระดาษทรายซ้อน / Flap Disc</h3>
-                            <p class="product-desc-short">ขัดปรับสภาพผิวเหล็กและสแตนเลสให้เนียนเรียบ</p>
-                            <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item" data-category="happy-tools" data-title="สเปรย์หล่อลื่นอเนกประสงค์" data-desc="สเปรย์ป้องกันสนิม หล่อลื่นจุดหมุนต่างๆ ขจัดเสียงรบกวน ไล่ความชื้นได้อย่างมีประสิทธิภาพสูงสุด" data-img="Packshot/Artboard 9.png">
-                    <div class="product-card">
-                        <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 9.png" alt="สเปรย์หล่อลื่นอเนกประสงค์" class="product-img" loading="lazy">
-                            <div class="product-badge tools-badge">Happy Tools</div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">สเปรย์หล่อลื่น / Lubricant Spray</h3>
-                            <p class="product-desc-short">ขจัดสนิม หล่อลื่น ไล่ความชื้น ป้องกันผิวโลหะ</p>
+                            <h3 class="product-name">สเปรย์ขจัดคราบน้ำมันและจารบี / SUMO AUTO</h3>
+                            <p class="product-desc-short">สูตร O-Ring Safe ไม่กัดยางและพลาสติก แห้งไว ไร้คราบ 840ml</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Happy Welding products -->
-                <div class="product-item" data-category="happy-welding" data-title="ตู้เชื่อมไฟฟ้าอัจฉริยะ" data-desc="ตู้เชื่อมระบบ Inverter รองรับการเชื่อม ARC/MMA กำลังไฟเสถียร เชื่อมนิ่ม ลากยาวได้ไม่มีสะดุด บอดี้แข็งแกร่งทนทาน" data-img="Packshot/Artboard 10.png">
+                <div class="product-item" data-category="happy-welding" data-title="หน้ากากเชื่อมปรับแสงอัตโนมัติ HT" data-desc="หน้ากากเชื่อมปรับแสงอัตโนมัติ HT เซนเซอร์ตัดแสงอัตโนมัติความเร็วสูง ปกป้องดวงตาจากรังสี UV/IR ในระดับเสี้ยววินาที เลนส์กว้างมองเห็นชัดเจน ปรับระดับความเข้มได้ น้ำหนักเบา สวมใส่สบายตลอดวัน" data-img="Packshot/Artboard 7.png" data-keywords="หน้ากากเชื่อม ปรับแสงอัตโนมัติ ht auto darkening welding helmet แว่นเชื่อม เซฟตี้ ตู้เชื่อม งานเชื่อม happy welding">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 10.png" alt="ตู้เชื่อมไฟฟ้าอัจฉริยะ" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 7.png" alt="หน้ากากเชื่อมปรับแสงอัตโนมัติ HT" class="product-img" loading="lazy">
                             <div class="product-badge welding-badge">Happy Welding</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">เครื่องเชื่อมอินเวอร์เตอร์ / Inverter Welder</h3>
-                            <p class="product-desc-short">เทคโนโลยีอินเวอร์เตอร์ เชื่อมง่าย ไฟนิ่ง ประหยัดไฟ</p>
+                            <h3 class="product-name">หน้ากากเชื่อมปรับแสงอัตโนมัติ / HT Helmet</h3>
+                            <p class="product-desc-short">เซนเซอร์ปรับแสงไว ปกป้องสายตา ปรับระดับได้ น้ำหนักเบา</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-welding" data-title="หน้ากากเชื่อมปรับแสงอัตโนมัติ" data-desc="หน้ากากเชื่อมปกป้องดวงตาแบบปรับแสงอัตโนมัติ ตอบสนองรวดเร็วระดับมิลลิวินาที ปลอดภัยต่อดวงตาระหว่างงานเชื่อมทุกรูปแบบ" data-img="Packshot/Artboard 11.png">
+                <div class="product-item" data-category="happy-welding" data-title="ชุดสายเชื่อมและหัวปืนเชื่อม CO2 / MIG Torch" data-desc="ชุดหัวปืนเชื่อมและสายเชื่อม CO2 / MIG พรีเมียมเกรด สายเชื่อมทองแดงนำกระแสไฟได้เสถียร หุ้มฉนวนทนความร้อนและสะเก็ดไฟ ด้ามจับดีไซน์กระชับมือ ไกกดนุ่มนวล หัวต่อมาตรฐาน Euro ทนทานสู้งานหนัก" data-img="Packshot/Artboard 8.png" data-keywords="สายเชื่อม ปืนเชื่อม mig co2 welding torch สายมิก หัวเชื่อม co2 อะไหล่เชื่อม ตู้เชื่อม happy welding">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 11.png" alt="หน้ากากเชื่อมปรับแสงอัตโนมัติ" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 8.png" alt="ชุดสายเชื่อมและหัวปืนเชื่อม CO2 / MIG" class="product-img" loading="lazy">
                             <div class="product-badge welding-badge">Happy Welding</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">หน้ากากเชื่อมปรับแสงอัตโนมัติ / Welding Helmet</h3>
-                            <p class="product-desc-short">ตอบสนองการปรับแสงอย่างรวดเร็ว ดีไซน์สวมใส่สบาย</p>
+                            <h3 class="product-name">ชุดสายเชื่อมและหัวปืนเชื่อม CO2 / MIG Torch</h3>
+                            <p class="product-desc-short">สายนำกระแสไฟเสถียร ทนความร้อนสูง หัวต่อมาตรฐาน Euro</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-welding" data-title="ลวดเชื่อมม้วนพรีเมียม" data-desc="ลวดเชื่อมมิก (MIG) และลวดเชื่อมอาร์กอน (TIG) คุณภาพสูง แนวเชื่อมสวย สะเก็ดน้อย โครงสร้างแข็งแรงทนทาน" data-img="Packshot/Artboard 12.png">
+                <div class="product-item" data-category="happy-welding" data-title="ลวดเชื่อมเหล็กหล่อ KOVET Ni98 (AWS: ENiCl)" data-desc="ลวดเชื่อมเหล็กหล่อนิกเกิลแท้ KOVET Ni98 แกนนิกเกิลบริสุทธิ์สูง 98% มาตรฐาน AWS A5.15 ENiCl เหมาะสำหรับงานเชื่อมซ่อมแซมเหล็กหล่อ บล็อกเครื่องยนต์ ชิ้นส่วนเครื่องจักร รอยเชื่อมเหนียวแน่น ไม่แตกร้าว กลึงแต่งขึ้นรูปได้ง่าย" data-img="Packshot/Artboard 9.png" data-keywords="ลวดเชื่อม ลวดเชื่อมเหล็กหล่อ kovet ni98 enicl nickel cast iron เชื่อมเหล็กหล่อ ธูปเชื่อม happy welding">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 12.png" alt="ลวดเชื่อมม้วนพรีเมียม" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 9.png" alt="ลวดเชื่อมเหล็กหล่อ KOVET Ni98" class="product-img" loading="lazy">
                             <div class="product-badge welding-badge">Happy Welding</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">ลวดเชื่อม MIG/TIG / Welding Wire</h3>
-                            <p class="product-desc-short">ไหลลื่น แนวเชื่อมสม่ำเสมอ คุณภาพโลหะประสานดีเยี่ยม</p>
+                            <h3 class="product-name">ลวดเชื่อมเหล็กหล่อ / KOVET Ni98</h3>
+                            <p class="product-desc-short">นิกเกิลบริสุทธิ์ 98% แนวเชื่อมเหนียวแน่น ไม่แตกร้าว กลึงแต่งง่าย</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-welding" data-title="เกจ์วัดแรงดันแก๊สความแม่นยำสูง" data-desc="เกจ์วัดและควบคุมแรงดันสำหรับถังแก๊สอาร์กอน คาร์บอนไดออกไซด์ และออกซิเจน มาตรวัดอ่านง่าย แม่นยำ ปลอดภัย" data-img="Packshot/Artboard 13.png">
+                <div class="product-item" data-category="happy-welding" data-title="ลวดเชื่อมฟลักซ์คอร์ไม่ใช้แก๊ส KOVET E71T-GS 1.0mm" data-desc="ลวดเชื่อมมิกแบบไม่ใช้แก๊ส (Gasless Flux Cored Wire) KOVET รุ่น E71T-GS ขนาด 1.0 มม. ม้วน 1 กก. เชื่อมง่าย แนวเชื่อมสวย ไหลลื่น สะเก็ดไฟน้อย ไม่ต้องต่อถังแก๊ส สะดวกต่อการพกพาและงานเชื่อมกลางแจ้ง" data-img="Packshot/Artboard 11.png" data-keywords="ลวดเชื่อมฟลักซ์คอร์ ไม่ใช้แก๊ส kovet e71t-gs flux cored wire 1.0mm ลวดเชื่อมมิก mig ตู้เชื่อมฟลักซ์คอร์ happy welding">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 13.png" alt="เกจ์วัดแรงดันแก๊สความแม่นยำสูง" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 11.png" alt="ลวดเชื่อมฟลักซ์คอร์ไม่ใช้แก๊ส KOVET E71T-GS" class="product-img" loading="lazy">
                             <div class="product-badge welding-badge">Happy Welding</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">เกจ์วัดแรงดันแก๊ส / Gas Regulator</h3>
-                            <p class="product-desc-short">ควบคุมแก๊สสม่ำเสมอ แข็งแรงทนทานด้วยบอดี้ทองเหลือง</p>
+                            <h3 class="product-name">ลวดเชื่อมฟลักซ์คอร์ไม่ใช้แก๊ส / KOVET E71T-GS</h3>
+                            <p class="product-desc-short">ขนาด 1.0 มม. 1 กก. เชื่อมง่ายไม่ต้องใช้แก๊ส พกพาสะดวก</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-welding" data-title="หัวเชื่อมและสายเชื่อมทนความร้อน" data-desc="หัวปืนเชื่อมและสายเชื่อมยาวพิเศษ ทนความร้อนสูง นำกระแสไฟฟ้าได้ดี ด้ามจับกระชับมือ ทำงานได้สะดวกขึ้น" data-img="Packshot/Artboard 14.png">
+                <div class="product-item" data-category="happy-welding" data-title="เครื่องเชื่อมอินเวอร์เตอร์ RILON TIG 250PAC/DC" data-desc="ตู้เชื่อมระบบอินเวอร์เตอร์มืออาชีพ RILON TIG 250PAC/DC รองรับการเชื่อมอาร์กอน TIG และเชื่อมไฟฟ้า MMA สลับระบบไฟ AC/DC ได้อย่างสมบูรณ์แบบ เชื่อมอลูมิเนียม สแตนเลส และเหล็กได้เนียนกริบ พร้อมฟังก์ชัน Pulse ปรับความถี่และกระแสไฟได้อย่างแม่นยำ" data-img="Packshot/Artboard 12.png" data-keywords="ตู้เชื่อม เครื่องเชื่อม อินเวอร์เตอร์ rilon tig 250pac/dc ac/dc เชื่อมอาร์กอน เชื่อมอลูมิเนียม mma pulse happy welding">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 14.png" alt="หัวเชื่อมและสายเชื่อมทนความร้อน" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 12.png" alt="เครื่องเชื่อมอินเวอร์เตอร์ RILON TIG 250PAC/DC" class="product-img" loading="lazy">
                             <div class="product-badge welding-badge">Happy Welding</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">หัวปืนและอะไหล่เชื่อม / Welding Torch</h3>
-                            <p class="product-desc-short">นำกระแสเสถียร สายทนทานสูง ปลอดภัยในทุกองศา</p>
+                            <h3 class="product-name">เครื่องเชื่อมอินเวอร์เตอร์ / RILON TIG 250PAC/DC</h3>
+                            <p class="product-desc-short">ระบบ AC/DC Pulse เชื่อมอลูมิเนียม สแตนเลส เหล็ก ไฟนิ่งเสถียร</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Happy Caster products -->
-                <div class="product-item" data-category="happy-caster" data-title="ลูกล้อยูรีเทนแป้นเบรกคู่" data-desc="ล้อยูรีเทนรับน้ำหนักสูง แข็งแรง หมุนลื่น 360 องศา ระบบเบรกดับเบิ้ลล็อก ปลอดภัยสูงสุด ไม่ทำลายผิวพื้น" data-img="Packshot/Artboard 15.png">
+                <div class="product-item" data-category="happy-caster" data-title="ลูกล้อยูรีเทนแป้นเบรกคู่ 5 นิ้ว งานหนัก" data-desc="ลูกล้อยูรีเทนสีแดง ขนาด 5 นิ้ว โครงสร้างเหล็กหนาพิเศษชุบซิงค์ แป้นหมุนรอบ 360 องศา พร้อมระบบดับเบิ้ลล็อก (Double Brake ON/OFF) ล็อกทั้งวงล้อและการหมุนของแป้น รับน้ำหนักได้สูงมาก ทนน้ำมัน ไม่ทำลายพื้นผิว" data-img="Packshot/Artboard 10.png" data-keywords="ลูกล้อ ล้อยูรีเทน แป้นเบรก ล้อ 5 นิ้ว heavy duty caster ล้อรถเข็น ล้ออุตสาหกรรม happy caster">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 15.png" alt="ลูกล้อยูรีเทนแป้นเบรกคู่" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 10.png" alt="ลูกล้อยูรีเทนแป้นเบรกคู่ 5 นิ้ว งานหนัก" class="product-img" loading="lazy">
                             <div class="product-badge caster-badge">Happy Caster</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">ล้อยูรีเทนแป้นเบรก / PU Caster with Brake</h3>
-                            <p class="product-desc-short">รับน้ำหนักได้สูง เงียบ ไม่ทิ้งรอยบนพื้นผิว</p>
+                            <h3 class="product-name">ลูกล้อยูรีเทนแป้นเบรกคู่ 5" / Heavy Duty</h3>
+                            <p class="product-desc-short">ล้อยูรีเทนแดง แกนเหล็ก รับน้ำหนักสูง เบรกคู่ล็อกมั่นคง</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-caster" data-title="ลูกล้อไนลอนอุตสาหกรรม" data-desc="ล้อไนลอนแท้ ทนสารเคมี ทนความชื้น รับน้ำหนักได้ดีมาก หมุนคล่องตัว เหมาะสำหรับโรงงานอุตสาหกรรมและห้องเย็น" data-img="Packshot/Artboard 16.png">
+                <div class="product-item" data-category="happy-caster" data-title="ลูกล้อยูรีเทนแป้นหมุน 100x32 มม." data-desc="ลูกล้อยูรีเทนสีส้ม ขนาด 100x32 มม. โครงเหล็กชุบเคลือบสีดำ แป้นหมุน 360 องศา ลูกปืนคู่ เคลื่อนที่เงียบ นุ่มนวล ดูดซับแรงสั่นสะเทือนได้ดีเยี่ยม เหมาะกับรถเข็นของในอาคาร สำนักงาน และโรงงาน" data-img="Packshot/Artboard 13.png" data-keywords="ลูกล้อ ล้อยูรีเทน สีส้ม แป้นหมุน 100x32 ล้อรถเข็น ล้อหมุน swivel caster happy caster">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 16.png" alt="ลูกล้อไนลอนอุตสาหกรรม" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 13.png" alt="ลูกล้อยูรีเทนแป้นหมุน 100x32 มม." class="product-img" loading="lazy">
                             <div class="product-badge caster-badge">Happy Caster</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">ล้อไนลอนหมุน / Swivel Nylon Caster</h3>
-                            <p class="product-desc-short">แข็งแกร่ง ทนกรด-ด่าง ทนทานสูงพิเศษ</p>
+                            <h3 class="product-name">ลูกล้อยูรีเทนแป้นหมุน / PU Swivel 100x32mm</h3>
+                            <p class="product-desc-short">ล้อยูรีเทนส้ม แป้นหมุนสีดำ เข็นลื่น เงียบ ไม่เป็นรอย</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-caster" data-title="ลูกล้อเหล็กหล่อ แป้นตาย" data-desc="ล้อเหล็กหล่อหนาพิเศษ แข็งแรงทนทาน เหมาะสำหรับรถเข็นงานหนักพิเศษที่เคลื่อนที่ในแนวตรง ทนความร้อนสูง" data-img="Packshot/Artboard 17.png">
+                <div class="product-item" data-category="happy-caster" data-title="ขาล้อคู่กระดก สแตนเลส 304 สำหรับประตูรั้ว" data-desc="ชุดขาล้อคู่สแตนเลสแบบกระดก ผลิตจากสแตนเลสเกรด 304 แท้ หนาพิเศษ ทนสนิมและการกัดกร่อน กลไกกระดกช่วยกระจายน้ำหนักประตูรั้วอย่างสมดุลเมื่อเลื่อนผ่านทางลาดเอียงหรือผิวไม่เรียบ ใช้งานร่วมกับล้อร่องประตูรั้วสแตนเลส" data-img="Packshot/Artboard 14.png" data-keywords="ขาล้อคู่ ขาล้อกระดก สแตนเลส 304 ล้อประตูรั้ว ประตูบานเลื่อน ขาล้อ รั้วบ้าน happy caster">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 17.png" alt="ลูกล้อเหล็กหล่อ แป้นตาย" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 14.png" alt="ขาล้อคู่กระดก สแตนเลส 304 สำหรับประตูรั้ว" class="product-img" loading="lazy">
                             <div class="product-badge caster-badge">Happy Caster</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">ล้อเหล็กหล่อแป้นคงที่ / Rigid Iron Wheel</h3>
-                            <p class="product-desc-short">สำหรับงานหนักที่สุด ทนความร้อนและน้ำมัน</p>
+                            <h3 class="product-name">ขาล้อคู่กระดก สแตนเลส 304 / Gate Bracket</h3>
+                            <p class="product-desc-short">สแตนเลส 304 แท้ ระบบกระดกกระจายน้ำหนัก ป้องกันล้อตกราง</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-caster" data-title="ลูกล้ออุตสาหกรรมหนักพิเศษ" data-desc="ลูกล้อโครงเหล็กหนาพิเศษชุบซิงค์ ออกแบบสำหรับงานที่ต้องการการรับน้ำหนักสูงสุด ทนแรงกระแทกได้ยอดเยี่ยม" data-img="Packshot/Artboard 18.png">
+                <div class="product-item" data-category="happy-caster" data-title="ลูกล้อยางดำ แป้นตาย สำหรับงานหนัก" data-desc="ลูกล้อยางตันสีดำ แป้นตาย (Rigid Caster) โครงสร้างเหล็กหนาปั๊มขึ้นรูปชุบซิงค์ แกนล้อประกบเหล็กกล้า แข็งแรง ทนทาน หน้ายางยืดหยุ่นสูง เข็นตรงเงียบ ซับแรงกระแทกได้ดีบนพื้นผิวขรุขระและคอนกรีต" data-img="Packshot/Artboard 15.png" data-keywords="ลูกล้อยาง ล้อยางดำ แป้นตาย rigid caster ล้อรถเข็น ล้อทางตรง ล้อตัน happy caster">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 18.png" alt="ลูกล้ออุตสาหกรรมหนักพิเศษ" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 15.png" alt="ลูกล้อยางดำ แป้นตาย สำหรับงานหนัก" class="product-img" loading="lazy">
                             <div class="product-badge caster-badge">Happy Caster</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">ล้ออุตสาหกรรมงานหนัก / Heavy-Duty Wheel</h3>
-                            <p class="product-desc-short">โครงเหล็กหนาพิเศษ รับน้ำหนักและแรงกระแทกได้ดีเลิศ</p>
+                            <h3 class="product-name">ลูกล้อยางดำ แป้นตาย / Rubber Rigid Caster</h3>
+                            <p class="product-desc-short">ล้อยางดำแกนเหล็ก วิ่งตรงนิ่ง เข็นนุ่ม ซับแรงกระแทกเยี่ยม</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-caster" data-title="ลูกล้อยางดำ แป้นหมุน" data-desc="ล้อยางดำ นุ่มนวล ดูดซับแรงสั่นสะเทือนได้ดี เข็นเงียบ เหมาะสำหรับใช้งานทั่วไป พื้นที่สำนักงาน และโรงพยาบาล" data-img="Packshot/Artboard 19.png">
+                <div class="product-item" data-category="happy-caster" data-title="ล้อร่องสแตนเลส ประตูรั้วบานเลื่อน พร้อมลูกปืน" data-desc="ล้อร่องกลมสแตนเลสแท้สำหรับประตูรั้วบานเลื่อน กลึงขึ้นรูปอย่างแม่นยำ ทนทานต่อแดดและฝน ไม่เป็นสนิม พร้อมตลับลูกปืนแบริ่งฝาปิดกันฝุ่น ช่วยให้เปิด-ปิดประตูรั้วได้อย่างลื่นไหล เบาแรง ไร้เสียงดังรบกวน" data-img="Packshot/Artboard 16.png" data-keywords="ล้อร่อง ล้อร่องกลม ล้อสแตนเลส ล้อประตูรั้ว ประตูบานเลื่อน ลูกปืน gate wheel happy caster">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 19.png" alt="ลูกล้อยางดำ แป้นหมุน" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 16.png" alt="ล้อร่องสแตนเลส ประตูรั้วบานเลื่อน พร้อมลูกปืน" class="product-img" loading="lazy">
                             <div class="product-badge caster-badge">Happy Caster</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">ล้อยางดำแกนเหล็ก / Black Rubber Caster</h3>
-                            <p class="product-desc-short">ยืดหยุ่นสูง เข็นนุ่มเงียบ ไม่กระแทกพื้นผิว</p>
+                            <h3 class="product-name">ล้อร่องสแตนเลสประตูรั้ว / Sliding Gate Wheel</h3>
+                            <p class="product-desc-short">สแตนเลสแท้กลึงขึ้นรูป มีลูกปืนในตัว เลื่อนลื่น เบาแรง ทนสนิม</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Happy Venus products -->
-                <div class="product-item" data-category="happy-venus" data-title="ตัวหนีบกระจกสแตนเลส 304" data-desc="ตัวหนีบกระจกผลิตจากสแตนเลสแท้เกรด 304 ทนสนิม ทนการกัดกร่อน ดีไซน์สวยหรู ปลอดภัย แข็งแรง ยึดกระจกได้แน่นหนา" data-img="Packshot/Artboard 20.png">
+                <div class="product-item" data-category="happy-venus" data-title="เสาสปิกอตยึดกระจก สแตนเลส สีดำด้าน (Matte Black)" data-desc="เสาสปิกอตยึดกระจกบานเปลือย ผลิตจากสแตนเลสคุณภาพสูง เคลือบผิวสีดำด้าน Matte Black หรูหราทันสมัย ติดตั้งยึดแผ่นกระจกโดยไม่ต้องเจาะรู นิยมใช้ในงานราวกันตกกระจก รั้วสระว่ายน้ำ และระเบียง ยึดแน่น ปลอดภัย ทนแดด ทนฝน" data-img="Packshot/Artboard 17.png" data-keywords="เสาสปิกอต สปิกอต ยึดกระจก สีดำด้าน spigot glass clamp ราวกันตก รั้วสระว่ายน้ำ กระจกเปลือย happy venus">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 20.png" alt="ตัวหนีบกระจกสแตนเลส 304" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 17.png" alt="เสาสปิกอตยึดกระจก สแตนเลส สีดำด้าน" class="product-img" loading="lazy">
                             <div class="product-badge venus-badge">Happy Venus</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">ตัวหนีบกระจกสแตนเลส / Glass Clamp</h3>
-                            <p class="product-desc-short">สแตนเลส 304 แท้ ดีไซน์เรียบหรู ป้องกันสนิมดีเยี่ยม</p>
+                            <h3 class="product-name">เสาสปิกอตยึดกระจก / Matte Black Spigot</h3>
+                            <p class="product-desc-short">สแตนเลสเคลือบดำด้าน ยึดกระจกไม่ต้องเจาะรู ดีไซน์โมเดิร์น</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-venus" data-title="เสาราวกันตกกระจกบานเปลือย" data-desc="เสาสแตนเลสตั้งพื้นสำหรับราวกันตกกระจก โครงสร้างแข็งแกร่ง ทนทาน รับแรงลมและแรงกดทับได้ดี ดีไซน์โมเดิร์นทันสมัย" data-img="Packshot/Artboard 21.png">
+                <div class="product-item" data-category="happy-venus" data-title="เสาราวบันไดและราวกันตกกระจก สแตนเลสพรีเมียม" data-desc="ชุดเสาราวบันไดและราวกันตกกระจกสแตนเลส มีหลากหลายรูปแบบ ทั้งเสาสแตนเลสเคลือบไททาเนียมสีทอง, สแตนเลสซาตินแฮร์ไลน์ และสแตนเลสผสานลายไม้ มาพร้อมตัวจับยึดกระจกและแป้นยึดพื้น แข็งแกร่ง รองรับแรงดึงและแรงกระแทกได้ดีเลิศ" data-img="Packshot/Artboard 18.png" data-keywords="เสาราวบันได เสาราวกันตก ราวกระจก สแตนเลสสีทอง สแตนเลสลายไม้ balustrade post ราวบันได happy venus">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 21.png" alt="เสาราวกันตกกระจกบานเปลือย" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 18.png" alt="เสาราวบันไดและราวกันตกกระจก สแตนเลสพรีเมียม" class="product-img" loading="lazy">
                             <div class="product-badge venus-badge">Happy Venus</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">เสาราวกันตกกระจก / Balustrade Post</h3>
-                            <p class="product-desc-short">เสาสแตนเลสทรงกลม/เหลี่ยม สวยงาม แข็งแรง ปลอดภัย</p>
+                            <h3 class="product-name">เสาราวบันไดและราวกระจก / Balustrade Post</h3>
+                            <p class="product-desc-short">สแตนเลสสีทอง แฮร์ไลน์ และลายไม้ ดีไซน์หรูหรา แข็งแรง</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-venus" data-title="มือจับประตูบานกระจกหรูหรา" data-desc="มือจับสแตนเลสสำหรับประตูกระจกบานผลักและบานเลื่อน ดีไซน์ทันสมัย จับถนัดมือ ทนทานต่อการสัมผัสและการใช้งานบ่อยครั้ง" data-img="Packshot/Artboard 22.png">
+                <div class="product-item" data-category="happy-venus" data-title="ตัวหนีบกระจกสแตนเลส ทรงตัวดี (D-Shape Glass Clamp)" data-desc="ตัวหนีบกระจกสแตนเลสเกรด 304 แท้ ดีไซน์ทรง D ผิวสแตนเลสขัดเงาเรียบหรู พร้อมยางรองกระจกกันรอยและป้องกันการลื่นหลุด ติดตั้งง่าย ยึดแผ่นกระจกกับผนัง เสาเหล็ก หรือท่อราวมือจับได้อย่างมั่นคง แข็งแรง ไร้สนิมตลอดอายุการใช้งาน" data-img="Packshot/Artboard 19.png" data-keywords="ตัวหนีบกระจก จับกระจก ทรง d glass clamp สแตนเลส 304 ยึดกระจก ราวกระจก กระจกบานเปลือย happy venus">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 22.png" alt="มือจับประตูบานกระจกหรูหรา" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 19.png" alt="ตัวหนีบกระจกสแตนเลส ทรงตัวดี" class="product-img" loading="lazy">
                             <div class="product-badge venus-badge">Happy Venus</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">มือจับประตูบานกระจก / Pull Handle</h3>
-                            <p class="product-desc-short">สแตนเลสขัดเงา/ขัดด้าน ดีไซน์พรีเมียม สไตล์โมเดิร์น</p>
+                            <h3 class="product-name">ตัวหนีบกระจกสแตนเลสทรง D / Glass Clamp</h3>
+                            <p class="product-desc-short">สแตนเลส 304 ขัดเงา พร้อมยางรองกันรอย ยึดแน่น ปลอดภัย</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-venus" data-title="บานพับประตูกระจกห้องน้ำ" data-desc="บานพับกระจกยึดผนัง ผลิตจากทองเหลืองชุบโครเมียมหนาพิเศษ แข็งแรง ไม่ตก ไม่เป็นสนิม เปิด-ปิด นุ่มนวล 90 องศา" data-img="Packshot/Artboard 23.png">
+                <div class="product-item" data-category="happy-venus" data-title="ขารับราวมือจับสแตนเลส ยึดกระจกและผนัง" data-desc="ชุดขารับราวมือจับสแตนเลสเกรด 304 สำหรับงานราวบันไดและราวกระจก มีหลากหลายรูปแบบ ทั้งแบบคอโค้ง 90 องศา, แบบข้อต่อตรง และแบบปรับมุมองศาได้ รองรับการยึดติดบนแผ่นกระจกหรือผนังปูน แข็งแรง มั่นคง ปลอดภัยต่อการพยุงตัว" data-img="Packshot/Artboard 20.png" data-keywords="ขารับราวมือจับ ขายึดราวมือจับ handrail bracket ยึดกระจก ยึดผนัง ราวบันได สแตนเลส 304 happy venus">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 23.png" alt="บานพับประตูกระจกห้องน้ำ" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 20.png" alt="ขารับราวมือจับสแตนเลส ยึดกระจกและผนัง" class="product-img" loading="lazy">
                             <div class="product-badge venus-badge">Happy Venus</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">บานพับห้องน้ำกระจก / Shower Hinge</h3>
-                            <p class="product-desc-short">สำหรับบานประตูกระจกห้องน้ำ เปิด-ปิดง่าย ทนความชื้น</p>
+                            <h3 class="product-name">ขารับราวมือจับสแตนเลส / Handrail Bracket</h3>
+                            <p class="product-desc-short">สแตนเลส 304 แท้ ยึดผนังและกระจก หลายสไตล์ คอโค้ง ข้อตรง</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="happy-venus" data-title="ตัวจับยึดกระจกบานเปลือย" data-desc="อุปกรณ์ยึดกระจกบานเปลือยกับผนังหรือกระจกด้วยกัน แข็งแรงทนทาน ทนแรงดึงสูง ช่วยให้งานสถาปัตยกรรมกระจกสวยงามและมั่นคง" data-img="Packshot/Artboard 24.png">
+                <div class="product-item" data-category="happy-venus" data-title="บานพับประตูกระจกห้องน้ำ 90 องศา สแตนเลส 304" data-desc="บานพับสำหรับประตูกระจกห้องน้ำแบบกระจกติดผนัง (Glass-to-Wall 90°) ผลิตจากสแตนเลสเกรด 304 คุณภาพสูง ทนต่อความชื้น น้ำ และคราบสบู่ได้ดีเยี่ยม ไม่เป็นสนิม ระบบสปริงช่วยเปิดและปิดบานประตูนุ่มนวล รองรับน้ำหนักบานกระจกได้มั่นคง บานไม่ตก" data-img="Packshot/Artboard 21.png" data-keywords="บานพับกระจก บานพับห้องน้ำ 90 องศา shower hinge สแตนเลส 304 ประตูกระจกห้องน้ำ ห้องอาบน้ำ happy venus">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 24.png" alt="ตัวจับยึดกระจกบานเปลือย" class="product-img" loading="lazy">
+                            <img src="Packshot/Artboard 21.png" alt="บานพับประตูกระจกห้องน้ำ 90 องศา สแตนเลส 304" class="product-img" loading="lazy">
                             <div class="product-badge venus-badge">Happy Venus</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">ตัวยึดกระจกบานเปลือย / Glass Connector</h3>
-                            <p class="product-desc-short">ยึดกระจกมุมต่างๆ ได้อย่างมั่นคง แข็งแรง ทนทาน</p>
+                            <h3 class="product-name">บานพับห้องน้ำกระจก 90° / Shower Hinge</h3>
+                            <p class="product-desc-short">สแตนเลส 304 แท้ เปิด-ปิดนุ่มนวล ทนน้ำ ทนความชื้น บานไม่ตก</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Others (Happy Kitchen / Happy Screw) products -->
-                <div class="product-item" data-category="others" data-title="ชั้นวางจานสแตนเลสในห้องครัว" data-desc="ชั้นวางจาน ชาม และเครื่องครัว ผลิตจากสแตนเลสฟู้ดเกรดแท้ แข็งแรงทนทาน ไม่เป็นสนิม ตะแกรงระบายน้ำได้ดี จัดการห้องครัวให้เป็นระเบียบ" data-img="Packshot/Artboard 25.png">
+                <!-- Others / Happy Screw & Hardware products -->
+                <div class="product-item" data-category="others" data-title="สะเก็นสแตนเลส ทรงดี (Stainless Steel 304 D-Shackle)" data-desc="สะเก็นสแตนเลสเกรด 304 ทรงตัวดี (D-Shackle) พร้อมสลักเกลียวล็อกแน่นหนา ทนทานต่อแรงดึงสูง ไม่เป็นสนิม เหมาะสำหรับงานเชื่อมต่อโซ่ ลวดสลิง เชือก งานยก ดึงรั้ง ในงานก่อสร้าง โรงงาน และเรือประมง" data-img="Packshot/Artboard 22.png" data-keywords="สะเก็น สะเก็นสแตนเลส ทรงดี d-shackle shackle สแตนเลส 304 รอก สลิง โซ่ ฮาร์ดแวร์ แบรนด์อื่นๆ">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 25.png" alt="ชั้นวางจานสแตนเลสในห้องครัว" class="product-img" loading="lazy">
-                            <div class="product-badge others-badge">Happy Kitchen</div>
+                            <img src="Packshot/Artboard 22.png" alt="สะเก็นสแตนเลส ทรงดี" class="product-img" loading="lazy">
+                            <div class="product-badge others-badge">แบรนด์อื่นๆ</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">ชั้นวางสแตนเลส / Kitchen Rack</h3>
-                            <p class="product-desc-short">แบรนด์ Happy Kitchen สแตนเลสฟู้ดเกรด ทนน้ำ ทนชื้น</p>
+                            <h3 class="product-name">สะเก็นสแตนเลสทรง D / 304 D-Shackle</h3>
+                            <p class="product-desc-short">สแตนเลส 304 แท้ สลักเกลียวแน่นหนา ทนแรงดึงสูง ไร้สนิม</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="others" data-title="พุกเหล็กและสลักเกลียวงานหนัก" data-desc="พุกเหล็กขยายตัวเพื่อยึดโครงสร้างคอนกรีต รับแรงดึงและแรงเฉือนได้สูงมาก เหมาะสำหรับงานติดตั้งโครงสร้างเหล็กขนาดใหญ่" data-img="Packshot/Artboard 26.png">
+                <div class="product-item" data-category="others" data-title="คาราบิเนอร์ / ห่วงสแน็ปลิงค์ สแตนเลส (Spring Snap Hook)" data-desc="คาราบิเนอร์หรือห่วงสแน็ปลิงค์สปริงล็อก ผลิตจากสแตนเลสแท้เกรด 304 ปากเปิด-ปิดอัตโนมัติด้วยแรงสปริง ทนทานต่อการกัดกร่อน ใช้งานคล้องเกี่ยวและปลดเร็ว สำหรับงานช่าง คล้องโซ่ สลิง รอก และกิจกรรมอเนกประสงค์" data-img="Packshot/Artboard 23.png" data-keywords="คาราบิเนอร์ สแน็ปลิงค์ snap hook carabiner สแตนเลส 304 ตะขอเกี่ยว ห่วงสปริง ฮาร์ดแวร์ แบรนด์อื่นๆ">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 26.png" alt="พุกเหล็กและสลักเกลียวงานหนัก" class="product-img" loading="lazy">
-                            <div class="product-badge others-badge">Happy Screw</div>
+                            <img src="Packshot/Artboard 23.png" alt="คาราบิเนอร์ / ห่วงสแน็ปลิงค์ สแตนเลส" class="product-img" loading="lazy">
+                            <div class="product-badge others-badge">แบรนด์อื่นๆ</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">พุกเหล็กยึดคอนกรีต / Steel Anchor Bolt</h3>
-                            <p class="product-desc-short">แบรนด์ Happy Screw พุกเหล็กขยายตัวรับน้ำหนักได้สูงมาก</p>
+                            <h3 class="product-name">คาราบิเนอร์สแตนเลส / Snap Hook</h3>
+                            <p class="product-desc-short">สแตนเลส 304 สปริงล็อก ปลดเร็ว คล้องเกี่ยวกับโซ่ สลิง เชือก</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-item" data-category="others" data-title="สกรูเกลียวปล่อย ปลายสว่าน" data-desc="สกรูยึดแผ่นเหล็กและหลังคาเมทัลชีท ปลายสว่านเจาะง่าย ยึดแน่น ป้องกันการรั่วซึมด้วยซีลยางคุณภาพสูง ทนต่อสภาพอากาศกลางแจ้ง" data-img="Packshot/Artboard 27.png">
+                <div class="product-item" data-category="others" data-title="โซ่สแตนเลส 304 คุณภาพสูง หลายขนาด" data-desc="โซ่สแตนเลสแท้เกรด 304 ข้อต่อเชื่อมไฟฟ้าเรียบเนียน แข็งแกร่ง ทนแรงดึงสูงมาก ไม่เป็นสนิม ทนแดด ฝน กรด-ด่าง และไอทะเล มีให้เลือกตั้งแต่ขนาดเล็กสำหรับแขวนป้ายจนถึงขนาดใหญ่สำหรับงานช่างและงานกั้นเขต" data-img="Packshot/Artboard 24.png" data-keywords="โซ่ โซ่สแตนเลส โซ่ 304 stainless chain โซ่กั้นทาง โซ่แขวน ฮาร์ดแวร์ แบรนด์อื่นๆ">
                     <div class="product-card">
                         <div class="product-img-wrapper">
-                            <img src="Packshot/Artboard 27.png" alt="สกรูเกลียวปล่อย ปลายสว่าน" class="product-img" loading="lazy">
-                            <div class="product-badge others-badge">Happy Screw</div>
+                            <img src="Packshot/Artboard 24.png" alt="โซ่สแตนเลส 304 คุณภาพสูง หลายขนาด" class="product-img" loading="lazy">
+                            <div class="product-badge others-badge">แบรนด์อื่นๆ</div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-name">สกรูเกลียวปล่อยปลายสว่าน / Self-tapping Screw</h3>
-                            <p class="product-desc-short">แบรนด์ Happy Screw เจาะง่าย ยึดแน่น ป้องกันสนิม</p>
+                            <h3 class="product-name">โซ่สแตนเลส 304 / Stainless Steel Chain</h3>
+                            <p class="product-desc-short">สแตนเลส 304 ข้อเชื่อมหนาแน่น ทนแรงดึง ไม่เป็นสนิม หลายขนาด</p>
                             <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
+
+                <div class="product-item" data-category="others" data-title="พุกตะกั่วดับเบิ้ล SUC ขนาด 1/2 นิ้ว (Double Expansion)" data-desc="พุกตะกั่วขยายตัวดับเบิ้ล แบรนด์ SUC สำหรับน็อตขนาด 1/2 นิ้ว (เจาะรู 7/8 นิ้ว) ตัวปลอกทำจากซิงค์อัลลอยด์ผสมตะกั่ว ออกแบบให้ขยายตัวสองทาง ยึดเกาะเนื้อคอนกรีตได้แน่นหนา รับแรงสั่นสะเทือนและแรงกระแทกได้ดีกว่าพุกทั่วไป" data-img="Packshot/Artboard 25.png" data-keywords="พุกตะกั่ว พุก suc double expansion พุกขยายตัว 1/2 นิ้ว พุกคอนกรีต น็อต สกรู happy screw แบรนด์อื่นๆ">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="Packshot/Artboard 25.png" alt="พุกตะกั่วดับเบิ้ล SUC ขนาด 1/2 นิ้ว" class="product-img" loading="lazy">
+                            <div class="product-badge screw-badge">Happy Screw</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">พุกตะกั่วดับเบิ้ล 1/2" / SUC Double Shield</h3>
+                            <p class="product-desc-short">ขยายตัวสองทิศทาง ยึดแน่นในคอนกรีต ทนแรงสั่นสะเทือนสูง</p>
+                            <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="others" data-title="พุกตะกั่วดับเบิ้ลพร้อมน็อตห่วงและน็อตขอ (Eye & Hook Bolt)" data-desc="ชุดพุกตะกั่วดับเบิ้ลขยายตัวสำเร็จรูป ประกอบด้วยน็อตห่วงกลม (Eye Bolt) สำหรับร้อยเชือก สลิง โซ่ และน็อตหัวตะขอ (Hook Bolt) สำหรับคล้องสิ่งของ ตัวพุกขยายตัวในคอนกรีตได้อย่างแข็งแกร่ง รับน้ำหนักแขวนได้อย่างมั่นคง ปลอดภัย" data-img="Packshot/Artboard 26.png" data-keywords="พุกห่วง พุกขอ พุกตะกั่ว eye bolt hook bolt พุกแขวน พุกยึดคอนกรีต happy screw แบรนด์อื่นๆ">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="Packshot/Artboard 26.png" alt="พุกตะกั่วดับเบิ้ลพร้อมน็อตห่วงและน็อตขอ" class="product-img" loading="lazy">
+                            <div class="product-badge screw-badge">Happy Screw</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">พุกตะกั่วห่วง-ขอ / Eye & Hook Anchor</h3>
+                            <p class="product-desc-short">ชุดพุกดับเบิ้ลพร้อมหัวห่วงและหัวขอ สำหรับงานแขวนยึดแน่นหนา</p>
+                            <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="others" data-title="พุกเหล็กชุบรุ้งยึดคอนกรีต หลายขนาด (Sleeve Anchor)" data-desc="พุกเหล็กขยายตัวชุบซิงค์รุ้งกันสนิม (Steel Sleeve Anchor Bolt) ปลอกเหล็กหนาช่วยขยายตัวยึดเกาะผนังคอนกรีตได้อย่างทรงพลัง พร้อมแหวนอีแปะ แหวนสปริง และหัวน็อตตัวเมียครบชุด เหมาะสำหรับยึดโครงสร้างเหล็ก เครื่องจักร และงานรับน้ำหนักสูง" data-img="Packshot/Artboard 27.png" data-keywords="พุกเหล็ก พุกชุบรุ้ง sleeve anchor bolt พุกยึดคอนกรีต พุกขยาย น็อตพุก happy screw แบรนด์อื่นๆ">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="Packshot/Artboard 27.png" alt="พุกเหล็กชุบรุ้งยึดคอนกรีต หลายขนาด" class="product-img" loading="lazy">
+                            <div class="product-badge screw-badge">Happy Screw</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">พุกเหล็กชุบรุ้ง / Sleeve Anchor Bolts</h3>
+                            <p class="product-desc-short">พุกเหล็กขยายตัวรับน้ำหนักสูง ชุบซิงค์รุ้งกันสนิม ครบทุกขนาด</p>
+                            <button class="btn-view-detail">ดูรายละเอียด <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Products Found Message -->
+            <div id="no-products-msg" class="no-products-found" style="display: none;">
+                <i class="fas fa-box-open"></i>
+                <h3>ไม่พบสินค้าที่คุณค้นหา</h3>
+                <p>ลองค้นหาด้วยคำค้นหาอื่น หรือเลือกหมวดหมู่ "ทั้งหมด" เพื่อดูสินค้าทั้งหมด</p>
+                <button type="button" class="btn btn-primary btn-pill" id="reset-catalog-btn">ล้างการค้นหา / ดูสินค้าทั้งหมด</button>
             </div>
         </div>
     </section>
@@ -431,8 +458,8 @@
                     <img src="logo/Happt Metal.png" alt="Happy Metal Logo" class="footer-logo">
                     <p class="footer-desc">ผู้จัดจำหน่ายอุปกรณ์งานช่าง เครื่องมือช่าง วัสดุ และอุปกรณ์ครบวงจร และแบรนด์คุณภาพ ในเครือ บริษัท แฮปปี้ เมทอล จำกัด</p>
                     <div class="footer-socials">
-                        <a href="https://line.me" target="_blank" class="social-icon"><i class="fab fa-line"></i></a>
-                        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://lin.ee/QelzAv5" target="_blank" class="social-icon"><i class="fab fa-line"></i></a>
+                        <a href="https://facebook.com/HappyWeldingOfficial" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
                 
@@ -463,24 +490,34 @@
                 
                 <!-- Column 4: Contact Us -->
                 <div class="footer-col contact-col">
-                    <h3>ติดต่อเรา</h3>
-                    <div class="footer-address">
-                        <p>บริษัท แฮปปี้ เมทอล จำกัด</p>
-                        <p>88/11 หมู่ที่ 6 ตำบลลาดหลุมแก้ว</p>
-                        <p>อำเภอลาดหลุมแก้ว จ.ปทุมธานี 12140</p>
-                    </div>
+                    <h3 class="footer-company-name">บริษัท แฮปปี้ เมทอล จำกัด</h3>
                     <ul class="footer-contact-details">
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <span>097-478-9494</span>
+                        <li class="contact-item-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="contact-main">88/11 ม.6 ต.ลาดหลุมแก้ว อ.ลาดหลุมแก้ว จ.ปทุมธานี 12140</span>
+                                <span class="contact-sub">สาขาสำนักงานใหญ่ · เลขประจำตัวผู้เสียภาษี 0135566033431</span>
+                            </div>
                         </li>
                         <li>
-                            <i class="far fa-envelope"></i>
-                            <span>Happymetal@gmail.com</span>
+                            <i class="fas fa-comment-dots"></i>
+                            <span>LINE ID: <a href="https://lin.ee/QelzAv5" target="_blank">@happym</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span><a href="tel:0859269797">085-926-9797</a> (คุณพล)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:pol@happymetal.co">pol@happymetal.co</a></span>
                         </li>
                         <li>
                             <i class="fas fa-globe"></i>
-                            <span>www.happymetal.com</span>
+                            <span><a href="https://happymetal.co" target="_blank">happymetal.co</a></span>
+                        </li>
+                        <li>
+                            <i class="far fa-clock"></i>
+                            <span>จ–ส 8.00 – 17.00 น.</span>
                         </li>
                     </ul>
                 </div>
@@ -519,10 +556,10 @@
                     </div>
                     
                     <div class="lightbox-actions">
-                        <a href="https://line.me" target="_blank" class="btn btn-line btn-pill">
-                            <i class="fab fa-line"></i> <span>สอบถามทาง Line</span>
+                        <a href="https://lin.ee/QelzAv5" target="_blank" class="btn btn-line btn-pill">
+                            <i class="fab fa-line"></i> <span>สอบถามทาง Line (@happym)</span>
                         </a>
-                        <a href="https://facebook.com" target="_blank" class="btn btn-fb btn-pill">
+                        <a href="https://facebook.com/HappyWeldingOfficial" target="_blank" class="btn btn-fb btn-pill">
                             <i class="fab fa-facebook-f"></i> <span>ทักแชท Facebook</span>
                         </a>
                     </div>
